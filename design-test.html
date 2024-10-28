@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocktail Hour Talent</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .slide {
+            position: relative;
+            width: 1024px;
+            height: 768px;
+            background-color: #eef4fc;
+            margin: 20px auto;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Diagonal Band Image Strip */
+   /* Thicker Diagonal Band with Parallel Sides */
+/* Thicker Diagonal Band with Increased Slope */
+.image-strip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('quartet.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(20% 470%, 100% 0%, 60% -40%, 30% 120%);
+    opacity: 1;
+}
+
+
+        /* Top-left content */
+        .content-top-left {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            width: 40%;
+            color: #333;
+        }
+
+        
+
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('quartet.jpg'); /* Your image path */
+            background-size: cover;
+            background-position: center;
+        }
+        .dark-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(247, 245, 238, 0.9); /* Adjust opacity for the dark effect */
+            /* This will darken the image without losing its texture */
+}
+    </style>
+</head>
+<body>
+
+    <div class="slide">
+        <div class="background-image"></div>
+    <!-- Darkened Overlay -->
+        <div class="dark-overlay"></div>
+        <!-- Diagonal Band Image Strip -->
+        <div class="image-strip"></div>
+
+        <!-- Top-left content (text) -->
+        <div class="content-top-left">
+            <div class="content" contenteditable="false">
+                <h3>Afterparty talent</h3> 
+                <br>
+                <br>
+                <h2>LED Violin</h2>
+                <p>For a high-energy afterparty, elevate the atmosphere with a dynamic LED violin performance that keeps the excitement going well into the night.</p>
+                <br>
+                <ul>
+                    <li>LED Violin Performance: $1,800</li>
+                </ul>
+            </div>
+        </div>
+
+        
+    </div>
+
+</body>
+</html>

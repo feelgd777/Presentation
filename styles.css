@@ -1,0 +1,576 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #d0bebe;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: ;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('wedding4.jpg'); /* Set your background image */
+    background-size: 30%; /* Cover the entire body */
+    background-attachment: fixed; /* Keep the background fixed */
+    background-position: top; /* Center the background */
+    background-repeat: no-repeat; /* Prevent repeating of the background */
+    
+}
+
+.slide {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1024px;
+    height: 768px;
+    padding: 40px;
+    background-color: #eef4fc;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    page-break-before: always;
+    page-break-after: avoid;
+    page-break-inside: avoid;
+    overflow: hidden;
+    position: relative; /* Required for absolute positioning of overlays */
+
+}
+
+
+/* Background Image */
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('quartett.jpg'); /* Your image path */
+    background-size: 80%;
+    background-position: 90%;
+    z-index: 1; /* Set below overlays */
+    /* padding: 20px; */
+}
+/* Background Image */
+.background-image-perc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('quartett.jpg'); /* Your image path */
+    background-size: 80%;
+    background-position: 90%;
+    z-index: 1; /* Set below overlays */
+    /* padding: 20px; */
+}
+.background-image-electric {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('electric.jpg'); /* Your image path */
+    background-size: 80%;
+    background-position: 90%;
+    z-index: 1; /* Set below overlays */
+    /* padding: 20px; */
+}
+.background-image-strings {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('strings.JPEG'); /* Your image path */
+    background-size: cover;
+    background-position: center;
+    z-index: 1; /* Set below overlays */
+    /* padding: 20px; */
+    background-position: -70%;
+}
+.background-image-harp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('Harpist.jpg'); /* Your image path */
+    background-size: cover;
+    background-size: 80%;
+    background-position: 30%;
+    z-index: 1; /* Set below overlays */
+    /* padding: 20px; */
+    
+
+}
+.background-image-fusion {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('dj-fusion2.png'); /* Your image path */
+    background-size: cover;
+    background-position: right;
+    z-index: 1; /* Set below overlays */
+}
+.background-image-aspen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('flowers.jpg'); /* Your image path */
+    background-size: cover;
+    background-position: center;
+    z-index: 1; /* Set below overlays */
+}
+.background-image-piano {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 90%;
+    background-repeat: repeat;
+    background-image: url('piano3.png'); /* Replace with your image path */
+    background-position: center;
+    z-index: 1; /* Set below overlays */
+}
+.background-image-sax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('sax-trio.png'); /* Your image path */
+    background-size: cover;
+    background-position: center;
+    z-index: 1; /* Set below overlays */
+    
+}
+.background-image-country {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('country_1.png'); /* Your image path */
+    background-size: cover;
+    background-position: center;
+    z-index: 1; /* Set below overlays */
+    background-position: 10%
+    
+}
+.background-image-andy {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('andy-2.jpg'); /* Your image path */
+    background-size: 180%;
+    background-position: 15%;
+    z-index: 1; /* Set below overlays */
+}
+
+/* Dark Overlay */
+.dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(247, 245, 238, 0.9); /* Adjust opacity for the dark effect */
+    z-index: 2; /* Set above background image */
+}
+
+.content {
+    z-index: 2
+}
+
+/* Diagonal Band Image Strip */
+.image-strip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('quartett.jpg'); /* Replace with your image path */
+    background-size: 80%;
+    background-position: 90%;
+    clip-path: polygon(20% 470%, 100% 0%, 60% -40%, 30% 120%);
+    opacity: 1;
+    z-index: 3; /* Set above dark overlay */
+
+}
+.image-strip-perc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 103%;
+    background-image: url('perc.png'), url('trombone.png'); /* Replace with your image path */
+    background-size: 100%, 85%;
+    background-position: top, bottom;
+    clip-path: polygon(20% 470%, 100% 0%, 60% -40%, 30% 120%);
+    opacity: 1;
+    z-index: 3; /* Set above dark overlay */
+
+}
+.image-strip-electric {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('electric.jpg'); /* Replace with your image path */
+    background-size: 70%;
+    background-position: -130% -6%;
+    clip-path: polygon(20% 470%, 100% 0%, 60% -40%, 30% 120%);
+    opacity: 1;
+    z-index: 3; /* Set above dark overlay */
+
+}
+.image-strip-strings {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('strings.JPEG'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(20% 470%, 100% 0%, 60% -40%, 30% 120%);
+    opacity: 1;
+    z-index: 3; /* Set above dark overlay */
+    background-position: -70%;
+}
+.image-strip-harp {
+    position: absolute;
+    background-repeat: repeat;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('Harpist.jpg'); /* Replace with your image path */
+    clip-path: polygon(20% 470%, 100% 0%, 60% -40%, 30% 120%);
+    opacity: 0.95;
+    z-index: 3; /* Set above dark overlay */
+    background-size: cover;
+    background-size: 80%;
+    background-position: 30%;
+    filter:brightness(1.1)
+    
+
+}
+.image-strip-fusion {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('dj-fusion2.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: right;
+    clip-path: polygon(20% 470%, 100% 0%, 60% -40%, 30% 120%);
+    opacity: 1;
+    filter: saturate(1);
+    z-index: 3; /* Set above dark overlay */
+}
+.image-strip-piano {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat:no-repeat;
+    background-image: url('piano3.png'); /* Replace with your image path */
+    background-size: 140%;
+    background-position: center;
+    clip-path: polygon(20% 470%, 100% 0%, 60% -40%, 30% 120%);
+    opacity: 0.85;
+    z-index: 3; /* Set above dark overlay */
+}
+.image-strip-sax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('sax-trio.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(20% 470%, 100% 0%, 60% -40%, 30% 120%);
+    opacity: 0.85;
+    z-index: 3; /* Set above dark overlay */
+}
+.image-strip-country {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('country_1.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(20% 470%, 100% 0%, 60% -40%, 30% 120%);
+    opacity: 0.85;
+    z-index: 3; /* Set above dark overlay */
+    background-position: 10%;
+}
+.image-strip-andy {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('andy-2.jpg');
+    background-size: 180%;
+    background-position: 15%;
+    clip-path: polygon(20% 470%, 100% 0%, 60% -40%, 30% 120%);
+    opacity: 1;
+    z-index: 3;
+    
+    /* background-position: 2%;  */
+
+    /* Set above dark overlay */
+    /* filter: contrast(0.8) sepia(0.6) saturate(2) brightness(0.8); */
+}
+
+/* Top-left content */
+.content-top-left {
+    margin-top: 40px;
+    position: absolute;
+    flex: 1;
+    top: 40px;
+    left: 40px;
+    width: 40%;
+    color: #333;
+    z-index: 4; /* Set above all layers */
+}
+
+/* Bottom-right content */
+.content-bottom-right {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+
+}
+
+a {
+    color: #3a77c1; /* Link color */
+    text-decoration:none; /* Remove underline */
+    text-decoration-thickness: 0.02em;
+    cursor: pointer;
+    font-size: large;
+    
+}
+
+a:hover {
+    text-decoration:underline; /* Add underline on hover */
+    color: #91b4e0;
+
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.4;
+}
+
+i {
+    margin-left: 5px; /* Add space between the text and icon */
+}
+
+h1, h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+
+p, ul {
+    font-size: 1.2em;
+    color: #333;
+    line-height: 1.6;
+}
+
+ul {
+    list-style: none;
+    padding: 10;
+    margin-left: 20px; /* Indent the list */
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul ul {
+    margin-top: 10px;
+    list-style-type:disc; /* Different bullet style for nested lists */
+    margin-left: 40px; /* Additional indentation for nested lists */
+    font-size: inherit; /* Ensure font size is inherited from parent */
+}
+ul ul ul {
+    list-style-type:"*";
+    font-size: 90%;
+    margin-left: 20px;
+    text-align: left;
+}
+
+h3 {
+    color: black;
+    font-size: 18pt;
+    opacity: 0.25;
+ 
+
+}
+
+
+/* Special Slide Styling */
+.special-slide {
+    /* background: linear-gradient(to bottom right, #e7b3b3, #a84b4b); */
+    background: url(horns.png);
+    background-repeat: no-repeat;
+    border-radius: 0px;
+    padding: 50px;
+    background-size: 140%;
+    background-position: left;
+    color: #f4f4f4;
+    font-family: 'Georgia', serif;
+}
+
+.title {
+    font-size: 2.5em;
+    color: #ede7db;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.sub-title {
+    font-size: 1.8em;
+    color: #e3cfb1;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 1.2em;
+    color: #dfd5d5;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Glimmer effect */
+.title.shimmer-effect {
+    background: linear-gradient(100deg, rgba(255, 255, 255, 0.2), rgba(228, 228, 228, 0.5), rgba(229, 156, 156, 0.2));
+    background-size: 800% -900%;
+    animation: shimmer 13s infinite;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.special-slide h3 {
+    font-size: 25px;
+    color: #eae3e3;
+    text-align: center;
+    opacity: 1;
+}
+
+.special-slide .description {
+    color: rgb(255, 247, 245);
+    text-align: center;
+}
+
+.bottom-image {
+    position: absolute; /* Positioning relative to the special slide */
+    bottom: 25px; /* Space from the bottom */
+    left: 50%; /* Centering */
+ 
+    transform: translateX(-50%); /* Correct centering */
+    z-index: 3; /* Ensure it’s above other content */
+}
+
+.bottom-image img {
+    max-width: 50%; 
+    height: auto; /* Maintain aspect ratio */
+    position: relative;
+    left: 25%;
+}
+
+@media (max-width: 768px) {
+    .bottom-image img {
+        max-width: 70%; /* Scale for smaller devices */
+    }
+}
+
+@media (max-width: 480px) {
+    .bottom-image img {
+        max-width: 90%; /* Further scale for very small devices */
+    }
+}
+
+@media (max-width: 768px) {
+    .bottom-image img {
+        max-width: 70%; /* Scale for smaller devices */
+    }
+}
+
+@media (max-width: 480px) {
+    .bottom-image img {
+        max-width: 90%; /* Further scale for very small devices */
+    }
+}
+
+/* Subtle Shimmer Animation */
+@keyframes shimmer {
+    0% {
+        background-position: -300% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* Media query to remove the box-shadow when printing */
+@media print {
+    .slide {
+        box-shadow: none; /* Disable box-shadow in print mode */
+    }
+}
+
+@media print {
+    body {
+        background-color: #000; /* Dark background color */
+        color: #f4f4f4; /* Light text color */
+    }
+
+    .slide {
+        background-color: #eef4fc; /* Preserve slide background color */
+        color: #000000; /* Light text color */
+        -webkit-print-color-adjust: exact; /* Ensure colors are preserved */
+        print-color-adjust: exact;
+        page-break-before: always;
+        
+    }
+
+    /* Any other elements that need custom printing styles */
+    .special-slide {
+  
+        margin:20px;
+        
+    }
+
+    a {
+        color: rgba(12, 88, 202, 0.558);
+    }
+}
