@@ -48,7 +48,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('images/quartett.JPG'); /* Your image path */
+    background-image: url('images/trio.JPG'); /* Your image path */
     background-size: 100%;
     background-position: 90%;
     z-index: 1; /* Set below overlays */
@@ -213,9 +213,10 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('images/quartett.jpg'); /* Replace with your image path */
-    background-size: 80%;
-    background-position: 90%;
+    background-repeat: no-repeat;
+    background-image: url('images/trio.JPG'); /* Replace with your image path */
+    background-size: 115%;
+    background-position: 1%;
     clip-path: polygon(20% 470%, 100% 0%, 60% -40%, 30% 120%);
     opacity: 1;
     z-index: 3; /* Set above dark overlay */
@@ -481,6 +482,7 @@ h3 {
     text-align: center;
     margin-bottom: 20px;
     letter-spacing: 2px;
+    text-decoration: none;
 }
 
 .sub-title {
@@ -498,14 +500,22 @@ h3 {
 }
 
 /* Glimmer effect */
-.title.shimmer-effect {
+/* .title.shimmer-effect {
     background: linear-gradient(100deg, rgba(255, 255, 255, 0.2), rgba(228, 228, 228, 0.5), rgba(229, 156, 156, 0.2));
     background-size: 800% -900%;
     animation: shimmer 13s infinite;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+} */
+
+.special-slide .title {
+    background: linear-gradient(90deg, rgba(75, 20, 20, 0.597), rgba(228, 228, 228, 0.481), rgba(75, 20, 20, 0.673));
+    /* -webkit-background-clip: text; */
+    background-clip: text;
+    color: transparent;
 }
+
 
 .special-slide h3 {
     font-size: 25px;
@@ -603,7 +613,24 @@ h3 {
     }
 
     a {
-        color: rgba(12, 88, 202, 0.558);
+        color: #3a77c1; /* Link color */
+        text-decoration: underline; /* Show underline in print */
+        font-size: large;
+    }
+   
+
+    /* Any other elements that need custom printing styles */
+    .special-slide {
+        margin: 20px;
+    }
+    
+    @media print {
+        .special-slide .title {
+            color: transparent; /* Keep the text transparent */
+            background: linear-gradient(90deg, rgba(75, 20, 20, 0.597), rgba(228, 228, 228, 0.481), rgba(75, 20, 20, 0.673));
+            -webkit-background-clip: text; /* For webkit browsers */
+            background-clip: text; /* For other browsers */
+        }
     }
 }
 
