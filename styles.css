@@ -54,6 +54,31 @@ body {
     z-index: 1; /* Set below overlays */
     /* padding: 20px; */
 }
+
+.background-image-harpduo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/harp-duo1.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: 60%;
+    z-index: 1; /* Set below overlays */
+    /* padding: 20px; */
+}
+.background-image-bluegrass {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/bluegrass-band1.jpg'); /* Your image path */
+    background-size: 115%;
+    background-position: 100%;
+    z-index: 1; /* Set below overlays */
+    /* padding: 20px; */
+}
 .background-image-flamenco {
     position: absolute;
     top: 0;
@@ -92,19 +117,7 @@ body {
     z-index: 1; /* Set below overlays */
     /* padding: 20px; */
 }
-.background-image-strings {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('images/strings.JPEG'); /* Your image path */
-    background-size: cover;
-    background-position: center;
-    z-index: 1; /* Set below overlays */
-    /* padding: 20px; */
-    background-position: -70%;
-}
+
 .background-image-harp {
     position: absolute;
     top: 0;
@@ -115,6 +128,21 @@ body {
     background-size: cover;
     background-size: 80%;
     background-position: 30%;
+    z-index: 1; /* Set below overlays */
+    /* padding: 20px; */
+    
+
+}
+.background-image-bridge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/strings2.jpg'); /* Your image path */
+    background-size: 95%;
+    background-position-y: 140%;
+    background-position-x: right;
     z-index: 1; /* Set below overlays */
     /* padding: 20px; */
     
@@ -137,7 +165,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('images/flowers.jpg'); /* Your image path */
+    background-image: url('images/sky.jpg'); /* Your image path */
     background-size: cover;
     background-position: center;
     z-index: 1; /* Set below overlays */
@@ -203,7 +231,7 @@ body {
 }
 
 .content {
-    z-index: 2
+    z-index: 4
 }
 
 /* Diagonal Band Image Strip */
@@ -222,6 +250,38 @@ body {
     z-index: 3; /* Set above dark overlay */
 
 }
+.image-strip-harpduo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: repeat;
+    background-image: url('images/harp-duo1.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: 60%;
+    clip-path: polygon(20% 470%, 100% 0%, 60% -40%, 30% 120%);
+    opacity: 0.9;
+    z-index: 3; /* Set above dark overlay */
+
+}
+
+.image-strip-bluegrass {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image: url('images/bluegrass-band1.jpg'); /* Replace with your image path */
+    background-size: 115%;
+    background-position: 100%;
+    clip-path: polygon(20% 470%, 100% 0%, 60% -40%, 30% 120%);
+    opacity: 1;
+    z-index: 3; /* Set above dark overlay */
+
+}
+
 .image-strip-flamenco {
     position: absolute;
     top: 0;
@@ -266,20 +326,7 @@ body {
     z-index: 3; /* Set above dark overlay */
 
 }
-.image-strip-strings {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('images/strings.JPEG'); /* Replace with your image path */
-    background-size: cover;
-    background-position: center;
-    clip-path: polygon(20% 470%, 100% 0%, 60% -40%, 30% 120%);
-    opacity: 1;
-    z-index: 3; /* Set above dark overlay */
-    background-position: -70%;
-}
+
 .image-strip-harp {
     position: absolute;
     background-repeat: repeat;
@@ -297,6 +344,31 @@ body {
     
 
 }
+.image-strip-bridge {
+    position: relative;
+    left: 40px;
+    width: 100%;
+    height: 112%;
+    clip-path: polygon(20% 470%, 100% 0%, 60% -40%, 30% 120%);
+    z-index: 3; /* Set above dark overlay */
+    overflow: hidden;
+  
+}
+
+
+.image-strip-bridge::before {
+    content: ''; /* Required for pseudo-elements */
+    position: absolute;
+    left: 10px; /* Moves the background image left */
+    width: 120%; /* Expands pseudo-element width for larger background control */
+    height: 120%; /* Expands pseudo-element height for larger background control */
+    background-image: url('images/strings.JPEG');
+    background-size: 100%; /* Ensures the background image fills the pseudo-element */
+    z-index: 4; /* Positions behind other content in the parent element */
+    opacity: 0.9; /* Optional: Adjust transparency */
+}
+
+
 .image-strip-fusion {
     position: absolute;
     top: 0;
@@ -466,11 +538,11 @@ h3 {
 /* Special Slide Styling */
 .special-slide {
     /* background: linear-gradient(to bottom right, #e7b3b3, #a84b4b); */
-    background: url(images/horns.png);
+    background: url(images/quartett.JPG);
     background-repeat: no-repeat;
     border-radius: 0px;
     padding: 50px;
-    background-size: 140%;
+    background-size: cover;
     background-position: left;
     color: #f4f4f4;
     font-family: 'Georgia', serif;
@@ -510,7 +582,7 @@ h3 {
 } */
 
 .special-slide .title {
-    background: linear-gradient(90deg, rgba(75, 20, 20, 0.597), rgba(228, 228, 228, 0.481), rgba(75, 20, 20, 0.673));
+    background: linear-gradient(90deg, rgba(207, 139, 139, 0.712), rgba(228, 228, 228, 0.481), rgba(207, 139, 139, 0.712));
     /* -webkit-background-clip: text; */
     background-clip: text;
     color: transparent;
@@ -627,7 +699,7 @@ h3 {
     @media print {
         .special-slide .title {
             color: transparent; /* Keep the text transparent */
-            background: linear-gradient(90deg, rgba(75, 20, 20, 0.597), rgba(228, 228, 228, 0.481), rgba(75, 20, 20, 0.673));
+            background: linear-gradient(90deg, rgba(207, 139, 139, 0.712), rgba(228, 228, 228, 0.481), rgba(207, 139, 139, 0.712));
             -webkit-background-clip: text; /* For webkit browsers */
             background-clip: text; /* For other browsers */
         }
