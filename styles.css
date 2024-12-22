@@ -14,7 +14,6 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('images/wedding4.jpg'); /* Set your background image */
     background-size: 30%; /* Cover the entire body */
     background-attachment: fixed; /* Keep the background fixed */
     background-position: top; /* Center the background */
@@ -133,21 +132,7 @@ body {
     
 
 }
-.background-image-bridge {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('images/strings2.jpg'); /* Your image path */
-    background-size: 95%;
-    background-position-y: 140%;
-    background-position-x: right;
-    z-index: 1; /* Set below overlays */
-    /* padding: 20px; */
-    
 
-}
 .background-image-fusion {
     position: absolute;
     top: 0;
@@ -344,28 +329,20 @@ body {
     
 
 }
+
+/* Background Image */
 .image-strip-bridge {
-    position: relative;
-    left: 40px;
-    width: 100%;
-    height: 112%;
-    clip-path: polygon(20% 470%, 100% 0%, 60% -40%, 30% 120%);
-    z-index: 3; /* Set above dark overlay */
-    overflow: hidden;
-  
-}
-
-
-.image-strip-bridge::before {
-    content: ''; /* Required for pseudo-elements */
     position: absolute;
-    left: 10px; /* Moves the background image left */
-    width: 120%; /* Expands pseudo-element width for larger background control */
-    height: 120%; /* Expands pseudo-element height for larger background control */
-    background-image: url('images/strings.JPEG');
-    background-size: 100%; /* Ensures the background image fills the pseudo-element */
-    z-index: 4; /* Positions behind other content in the parent element */
-    opacity: 0.9; /* Optional: Adjust transparency */
+    background-repeat: repeat;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/strings.JPEG'); /* Replace with your main image */
+    background-size: 90%;
+    background-position: 165% 70%;
+    clip-path: polygon(20% 470%, 100% 0%, 60% -40%, 30% 120%); /* Diagonal effect */
+    z-index: 2; /* Below content, above background */
 }
 
 
@@ -616,6 +593,23 @@ h3 {
     position: relative;
     left: 25%;
 }
+/* New Image Strip with Overlays */
+.image-strip-pathway {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./images/platform.jpg'); /* Replace with your image */
+    background-size: 80%;
+    background-position: 80% 40%; /* Moves the image to the right */
+    z-index: 2; /* Below content */
+    clip-path: polygon(20% 470%, 100% 0%, 60% -40%, 30% 120%); /* Diagonal effect */
+    opacity: 0.8;
+    background-position: 100%;
+}
+
+
 
 @media (max-width: 768px) {
     .bottom-image img {
