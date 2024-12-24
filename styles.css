@@ -150,7 +150,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('images/sky.jpg'); /* Your image path */
+    background-image: url('images/nye2.png'); /* Your image path */
     background-size: cover;
     background-position: center;
     z-index: 1; /* Set below overlays */
@@ -611,6 +611,20 @@ h3 {
     opacity: 0.8;
     background-position: 100%;
 }
+.image-strip-lj {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./images/LJ.png'); /* Replace with your image */
+    background-size: 80%;
+    background-position: 80% 40%; /* Moves the image to the right */
+    z-index: 2; /* Below content */
+    clip-path: polygon(20% 470%, 100% 0%, 60% -40%, 30% 120%); /* Diagonal effect */
+    opacity: 0.8;
+    background-position: 100%;
+}
 
 
 
@@ -688,14 +702,10 @@ h3 {
     }
    
 
-    /* Any other elements that need custom printing styles */
-    .special-slide {
-        margin: 20px;
-    }
+
     
     @media print {
         .special-slide .title {
-            color: transparent; /* Keep the text transparent */
             background: linear-gradient(90deg, rgba(207, 139, 139, 0.712), rgba(228, 228, 228, 0.481), rgba(207, 139, 139, 0.712));
             -webkit-background-clip: text; /* For webkit browsers */
             background-clip: text; /* For other browsers */
@@ -703,3 +713,10 @@ h3 {
     }
 }
 
+@media print {
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: auto;
+    }
+}
